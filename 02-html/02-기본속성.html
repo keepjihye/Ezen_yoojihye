@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- heading -->
+    <!-- 웹페이지에 표시할 제목 또는 부제목 -->
+    <h1>네이버</h1>
+    <h2>뉴스 스텐다드</h2>
+    <h3>경제</h3>
+
+    <hr>
+    <!-- p : 문단태그 -->
+    <p>
+        문단의 단락을
+        의미합니다.
+    </p>
+    <pre>
+            문단의    단락을
+            의미합니다.
+        </pre>
+    <b>굵은 글씨 태그</b>
+    <br>
+    <strong>중요한 글 태그</strong>
+    <br>
+    <em>그냥 글 태그</em>
+    <address>주소 서울시 서초구</address>
+    <hr>
+    <!--a : 링크 -->
+    <!-- 페이지를 연결할 때 사용하는 태그 -->
+
+    <!-- 절대 경로 -->
+    <a href="https://www.naver.com/">네이버</a>
+    <!-- 새탭으로 열려면 target="_blank"추가 -->
+    <a href="https://www.naver.com/" target="_blank">네이버(새 탭열기)</a>
+    <br>
+    <!-- title 속성 : 새창열릴 때 알려주려고 씀(장애인분들을 위해) -->
+    <a href="https://www.w3schools.com/html/" title="새창열림">Visit our HTML Tutorial</a>
+
+    <!-- 상대경로 -->
+    <!-- 나를 기준으로 상대의 경로를 찾음 -->
+    <a href="./01-기본레이아웃.html">01-기본레이아웃.html</a>
+    <br>
+    <a href="mailto:yoojihea60@gmail.com">메일 연결하기 yoo@gmail.com</a>
+    <a href="tel:010-1234-5678">전화 연결하기 010-1234-5678</a>
+    <!-- button : js처리 -->
+    <button>버튼</button>
+    <button onclick="document.location">HTML Tutorial</button>
+
+    <!-- img 태그 -->
+    <!-- 운영성 이미지만 추가!!! / 기본 디자인 이미지는 css로 -->
+    <!-- 절대 경로 -->
+    <img src="https://ssl.pstatic.net/melona/libs/1512/1512610/f76ea6985ca065e5d800_20240930120304325.jpg"
+        alt="현대해상 다이렉트 자동차보험 광고">
+    <!-- 상대 경로 -->
+    <!-- ./와 /의 차이? :  -->
+    <img src="/images/upload_1727689687019dbUAv.png" alt="네이버 플러스 슈퍼적립 이벤트">
+    <img src="./images/upload_1727689687019dbUAv.png" alt="네이버 플러스 슈퍼적립 이벤트">
+
+    <!-- 파비콘 -->
+    <link rel="short-icon" type="image/x-icon" href="">
+
+    <!-- table -->
+    <table>
+        <caption>
+            표 제목
+        </caption>
+        <thead></thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+    </table>
+</body>
+
+</html>
