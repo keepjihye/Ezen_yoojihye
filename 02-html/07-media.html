@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media | html</title>
+</head>
+
+<body>
+    <h1>html</h1>
+    <h2>media</h2>
+    <!-- video -->
+    <!-- 절대경로 -->
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls>토끼와 나비</video>
+
+    <!-- 상대경로 -->
+    <!-- autoplay muted : 음소거로 자동재생 -->
+    <!-- loop : 무한반복 -->
+    <video width="400" autoplay muted loo[]>
+        <!-- source를 사용하면 브라우저가 선택할 수 있는 대체 비디오 파일을 지정할 수 있음 -->
+        <source src="../images/mov_bbb.mp4">
+        <source src="../images/mov_bbb.ogg">
+        <source src="../images/mov_bbb.webm">
+    </video>
+
+    <!-- audio -->
+    <audio src="../images/horse.mp3"></audio>
+
+    <!-- youtube -->
+    <!-- 자동재생 & 음소거하려면 아이디 뒤에다 ?autoplay=1&mute=1 반복재생 : loop=1 / 컨트롤러 : controls=1 -->
+    <iframe width="525" height="562" src="https://www.youtube.com/embed/L1jvaonMSsY?autoplay=1&mute=1&controls=0"
+        title="흑백요리사 셰프들 직접 등판👨‍🍳 여러분의 댓글과 반응을 읽어봤습니다 | 흑백요리사: 요리 계급 전쟁 | 넷플릭스" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 | css</title>
+</head>
+
+<body>
+    <h1>css</h1>
+    <h2>선택자</h2>
+
+    <!-- 심플 선택자 -->
+    <h1 id="logo" class="logo">logo</h1>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        #logo {
+            color: blue;
+        }
+
+        /* green으로 안바뀐 이유? : 우선순위에서 class가 밀림 */
+        .logo {
+            color: green;
+        }
+
+        /* 이렇게 쓰면 안됨 걍 예시 */
+        h1#logo {
+            color: yellow;
+        }
+    </style>
+    <!-- 자손선택 : 공백 -->
+    <div class="sel1">
+        <p>자손1</p>
+        <p>자손2</p>
+        <section>
+            <p>손자</p>
+        </section>
+    </div>
+    <style>
+        .sel1 p {
+            color: purple;
+        }
+
+        .sel1>p {
+            color: blue;
+        }
+    </style>
+
+    <!-- 인접 형제 선택기 : + -->
+    <input type="checkbox" id="check1" name="check1" />
+    <label for="check1">이용약관</label>
+    <!-- name을 넣는 이유는 데이터를 넘기기 위함 -->
+    <br>
+    <input type="checkbox" id="check2" name="check1" checked />
+    <label for="check2">개인정보처리방침</label>
+
+    <style>
+        input:checked+label {
+            color: red;
+        }
+    </style>
+    <br>
+    <!-- 상태선택기 : (:상태값) -->
+    <a href="#" class="btn">버튼</a>
+    <style>
+        .btn {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background: blue;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .btn:hover {
+            background: red;
+        }
+    </style>
+    <hr>
+    <!-- 가상 클래스 -->
+    <ul class="nav1">
+        <li>menu1 <span>|</span></li>
+        <li>menu2 <span>|</span></li>
+        <li>menu3 <span>|</span></li>
+        <li>menu4 <span>|</span></li>
+    </ul>
+    <style>
+        * {
+            list-style: none;
+        }
+
+        .nav1 {
+            display: flex;
+        }
+
+        .nav1 li:first-child {
+            color: blue;
+        }
+
+        .nav1 li:last-child {
+            color: red;
+        }
+
+        .nav1 li:last-child span {
+            display: none;
+        }
+    </style>
+    <input class="text1" type="text" id="text1" name="text1" placeholder="나를 클릭하여 초점을 맞추세요">
+    <style>
+        .text1 {
+            width: 200px;
+            height: 50px;
+            display: block;
+            border: 3px solid #999;
+            text-align: center;
+        }
+
+        .text1:focus {
+            border-color: red;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .text1:focus::placeholder {
+            color: #fff;
+        }
+    </style>
+</body>
+
+</html>
