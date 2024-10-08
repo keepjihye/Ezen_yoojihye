@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자 | css</title>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 
 <body>
@@ -52,16 +54,31 @@
 
     <!-- 인접 형제 선택기 : + -->
     <input type="checkbox" id="check1" name="check1" />
-    <label for="check1">이용약관</label>
+    <label for="check1" class="label">이용약관</label>
     <!-- name을 넣는 이유는 데이터를 넘기기 위함 -->
     <br>
     <input type="checkbox" id="check2" name="check1" checked />
-    <label for="check2">개인정보처리방침</label>
+    <label for="check2" class="label">개인정보처리방침</label>
 
     <style>
         input:checked+label {
             color: red;
         }
+
+        .label::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+        }
+
+        input:checked+.label::before {
+            background-color: blue;
+        }
+
+
+        input
     </style>
     <br>
     <!-- 상태선택기 : (:상태값) -->
@@ -84,13 +101,13 @@
     <hr>
     <!-- 가상 클래스 -->
     <ul class="nav1">
-        <li>menu1 <span>|</span></li>
-        <li>menu2 <span>|</span></li>
-        <li>menu3 <span>|</span></li>
-        <li>menu4 <span>|</span></li>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
     </ul>
     <style>
-        * {
+        .nav1 {
             list-style: none;
         }
 
@@ -107,6 +124,15 @@
         }
 
         .nav1 li:last-child span {
+            display: none;
+        }
+
+        .nav1 li::after {
+            content: '|';
+            margin-right: 10px;
+        }
+
+        .nav1 li:last-child::after {
             display: none;
         }
     </style>
@@ -128,6 +154,77 @@
 
         .text1:focus::placeholder {
             color: #fff;
+        }
+    </style>
+
+    <!-- 가상선택자 (::before, ::after) -->
+    <ul class="list2">
+        <li>menu1 <i class="las la-otter"></i></li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+    <style>
+        .list2::before {
+            content: "ul앞 위치가 맞나요?";
+            color: palevioletred;
+        }
+
+        .list2::after {
+            content: 'ul뒤 위치가 맞나요?';
+            color: palevioletred;
+        }
+
+        .list2 {
+            list-style: none;
+        }
+
+        .list2 li::before {
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+            background: greenyellow;
+        }
+
+        .list2 li::after {
+            content: '\f900';
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+        }
+    </style>
+
+    <ul class="list3">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+    <style>
+        .list3 {
+            list-style: none;
+        }
+
+        .list3 li::before {
+            content: '\f105';
+            font-family: 'Line Awesome Free';
+            font-weight: 900;
+        }
+    </style>
+
+    <!-- 속성 선택자 (~[]) -->
+    <a href="#">네이버1</a>
+    <a href="#" target="_blank">네이버2</a>
+    <a href="#" target="_top">네이버3</a>
+    <style>
+        a[target] {
+            background-color: rgb(255, 255, 0);
+        }
+
+        a[target='_blank'] {
+            color: red;
         }
     </style>
 </body>

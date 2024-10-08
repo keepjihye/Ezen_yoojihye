@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font | css</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Noto+Sans+KR:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* reset */
+        html,
+        body {
+            font-size: 20px;
+            /* 크롬의 기본 폰트 사이즈가 16px임 */
+            font-family: "Noto Sans KR", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css</h1>
+    <h2>font</h2>
+
+    <!-- font family : 글꼴 -->
+    <p class="txt1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, delectus et quis nemo adipisci
+        deleniti sapiente possimus fugit quasi a minima dolorum? Modi soluta libero illum dolorum aspernatur eveniet
+        nostrum!</p>
+    <hr>
+
+    <style>
+        .txt1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+    <!-- font size -->
+    <!-- 절대 사이즈 : px -->
+    <!-- 상대 사이즈 : rem(), em(부모기준) -->
+    <p class="txt2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, optio?</p>
+    <p class="txt3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptate.</p>
+
+    <style>
+        .txt2 {
+            font-size: 20px;
+        }
+
+        .txt3 {
+            color: violet;
+            font-size: 1.25em;
+        }
+    </style>
+
+    <ul class="list1">
+        <li>안녕하세요</li>
+        <li>저는 지혜입니다</li>
+        <li>
+            <b>프론트엔드</b>
+            수업중입니다
+        </li>
+        <li><b>오늘은</b>24년 10월 8일입니다.</li>
+    </ul>
+
+    <style>
+        .list1 b {
+            font-size: 1.5em;
+        }
+
+        .list1 li:first-child {
+            font-size: 0.875rem;
+        }
+
+        .list1 li:nth-child(2) {
+            font-size: 0.875rem;
+        }
+
+        .list1 li:nth-child(3) {
+            font-size: 1.2em;
+        }
+
+        .list1 li:nth-child(4) {
+            /* 40px */
+            font-size: 2em;
+        }
+
+        .list1 li:nth-child(4) b {
+            /* 80px */
+            /* em : 자기 부모를 기준으로 배수를 함 b의 기준->li */
+            /* font-size: 2em; */
+
+            /* 40px */
+            /* rem : html, body 기준으로 배수를 함 */
+            font-size: 2rem;
+        }
+    </style>
+    <!-- vw: viewport 기준 -->
+    <hr>
+    <p class="txt4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, fuga.</p>
+    <style>
+        .txt4 {
+            color: tomato;
+            font-size: 10vw;
+            font-family: "Edu AU VIC WA NT Dots", cursive;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 | css</title>
+</head>
+
+<body style="height: 300vh;">
+    <h1>css</h1>
+    <h2>배경</h2>
+
+    <!-- Background Color -->
+    <div class="box1">Box1</div>
+    <div class="box2">Box2</div>
+    <div class="box3">Box3</div>
+    <div class="box4">Box4</div>
+    <style>
+        .box1 {
+            width: 800px;
+            height: 100px;
+            background-color: rgba(255, 251, 0, 0.7);
+            background-image: url("images/kakao.png");
+            background-repeat: repeat-x;
+        }
+
+        .box2 {
+            width: 800px;
+            height: 100px;
+            background-color: rgba(255, 178, 84, 0.7);
+            background-image: url("images/kakao.png");
+            background-repeat: no-repeat;
+            /* position : x축 y축 */
+            background-position: 50% 50%;
+        }
+
+        .box3 {
+            height: 500px;
+            background-image: url("images/bg-a.jpg");
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            background-color: rgb(149, 205, 255);
+            /* background-attachment: fixed; */
+            /* background-size: 100% auto; */
+            /* 이미지 꽉 채우기 */
+            background-size: cover;
+            /* 이미지가 안잘리는 사이즈로 채우기 */
+            /* background-size: contain; */
+        }
+
+        .box4 {
+            height: 500px;
+            background: rgb(255, 170, 224) url("images/logo-naver.jpeg") no-repeat fixed right top /contain;
+
+        }
+    </style>
+</body>
+
+</html>
