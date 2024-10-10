@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float | css</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="clear">
+            <h1>logo</h1>
+            <nav></nav>
+        </header>
+        <main>
+            <ul class="clear">
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+            </ul>
+        </main>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 100px;
+            background: skyblue;
+        }
+
+        .clear::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        ul {
+            background: red;
+            list-style: none;
+            width: 100%;
+        }
+
+        ul li {
+            float: left;
+            margin-right: 25px;
+            width: calc(20% - 25px);
+            height: 200px;
+            background: pink;
+            box-sizing: border-box;
+        }
+
+        ul li:last-child {
+            margin-right: 0;
+        }
+    </style>
+</body>
+
+</html>
