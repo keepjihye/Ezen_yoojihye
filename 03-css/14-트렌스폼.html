@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform : css</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            transition: transform 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css transform</h1>
+
+    <h2>1. 기본</h2>
+    <div class="box1"></div>
+
+    <h2>2. translate</h2>
+    <div class="box2">마우스 오버 시 움직임</div>
+    <style>
+        /* ease-in- 느린 시작으로 전환 효과를 지정합니다. */
+        .box2 {
+            transition-timing-function: ease-in
+        }
+
+        .box2:hover {
+            /* translate(x축, y축) */
+            transform: translate(50px, -50px);
+        }
+    </style>
+
+    <h2>3. rotate</h2>
+    <div class="box3"></div>
+    <style>
+        .box3 {
+            transform: rotate(40deg);
+        }
+    </style>
+
+    <h2>4. scale</h2>
+    <div class="box4"></div>
+    <style>
+        .box4 {
+            /* scale(높이배수,너비배수) */
+            transform: scale(2, -0.5);
+        }
+    </style>
+
+    <h2>5. skew</h2>
+    <div class="box5"></div>
+    <style>
+        .box5 {
+            transform: skew(30deg, 20deg);
+        }
+    </style>
+</body>
+
+</html>
