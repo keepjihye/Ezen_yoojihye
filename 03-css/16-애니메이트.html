@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation | css</title>
+</head>
+
+<body>
+    <h1>css animation</h1>
+    <div class="wrap">
+        <div class="box box1">BOX1</div>
+        <div class="box box2">BOX2</div>
+    </div>
+    <style>
+        .wrap {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background: #eee;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 애니메이션 */
+        @keyframes ani-box1 {
+
+            /* top, left로만 움직이게 해야 오류 안남 */
+            0% {
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                top: 0;
+                left: 400px;
+                /*right쓸거면 이렇게 */
+                /* right: 0;
+                left: auto; */
+            }
+
+            50% {
+                top: 400px;
+                left: 400px;
+            }
+
+            75% {
+                top: 400px;
+                left: 0;
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes ani-box2 {
+            0% {
+                top: 0;
+                left: 0;
+            }
+
+            100% {
+                top: 400px;
+                left: 400px;
+            }
+
+        }
+
+        .box1 {
+            /* animation delay 음수도 가능 => 이미 ~초 지난것처럼 보여줌 */
+            /* alternate : 앞으로갔다가 뒤로 감 */
+            animation: ani-box1 3s 1s infinite alternate;
+            background: lightgreen;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box2 {
+            /* forwards : 애니메이션 실행 후 마지막 자리에 그대로 */
+            animation: ani-box2 2s forwards;
+            background: lightcoral;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</body>
+
+</html>

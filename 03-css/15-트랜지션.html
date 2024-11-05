@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition | css</title>
+</head>
+
+<body>
+    <h1>css transiton</h1>
+
+    <div class="wrap">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+
+    <style>
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            width: 400px;
+            padding: 30px;
+            background: #eee;
+        }
+
+        .wrap div {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            color: #fff;
+            font-size: 3em;
+            text-align: center;
+            /* 가운데 정렬 */
+            line-height: 100px;
+            /* transition: transform 1s; */
+            /* transition: all 1s ease-in; */
+            /* transition-timing-function: ease-in; */
+        }
+
+        /* 
+        .box1:hover {
+            transform: translate(0, 100px) scale(1.5);
+            이것만 쓰면 색깔이 애니메이션 없이 걍바뀜
+            background-color: lightcoral;
+        } */
+    </style>
+</body>
+
+</html>
