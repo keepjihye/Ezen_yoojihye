@@ -34,7 +34,50 @@ console.log(array1[array1.length - 1]);
 // 객체 (순서가 없는 집합)
 const user = {
     name: '지혜',
-    age: 3
-}
+    age: 3,
+};
+
 console.log(`${user.name}는 ${user.age}살입니다.`);
+
+const userA = {
+    name: 'Kim',
+    age: 4,
+};
+
+const userB = {
+    name: 'Yoo',
+    age: 10,
+    parent: userA,
+};
+
+console.log(userB);
+// 점표기법
+console.log(userB.parent.name);
+// 대괄호표기법
+console.log(userB['parent']['name']);
+const users = [userA, userB];
+console.log(users);
+console.log(users[0]);
+
+// 함수
+function add(a, b) {
+    console.log("a+b=");
+    return a + b;
+};
+console.log(add(7, 4));
+
+// 함수표현
+const add2 = function (a, b) {
+    console.log(a + b);
+
+};
+add2(2, 6);
+
+// 화살표함수
+// const 함수명=(인수)=>{실행문};
+const add3 = (a, b) => {
+    console.log(a + b);
+
+};
+add3(6, 3);
 
